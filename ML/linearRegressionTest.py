@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn import linear_model
+from sklearn.externals import joblib
 import math
 
 # Data Read 
@@ -21,3 +22,9 @@ print(reg.intercept_)
 #Now Prediction using area, bedrooms, and age
 print(reg.predict([[3200, 3, 20]]))
 
+#save the training model in a module
+joblib.dump(reg,'linearRegression_model')
+
+# use saved model to predict data
+model = joblib.load('linearRegression_model')
+print(model.predict([[3200, 3, 20]]))
