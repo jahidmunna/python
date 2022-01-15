@@ -1,6 +1,6 @@
 import re
 
-EMAIL_PATTERN = "[a-zA-Z]+[0-9]*@[a-zA-Z]+\.(com|edu|net)"
+EMAIL_PATTERN = r"[a-zA-Z]+[0-9]*@[a-zA-Z]+\.(com|edu|net)"
 
 while True:
     user_input =str(input("Enter E-Mail: "))
